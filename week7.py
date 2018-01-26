@@ -49,13 +49,11 @@ dire_flying_courier_time       71132
 dire_first_ward_time           95404
 '''
 
-data.fillna(0) # заполним пропуски в данных нулями, согласно указаниям в задании
+# заполним пропуски в данных нулями, согласно указаниям в задании
+
+data=data.fillna(0) 
 
 X = data[features_test]
 y = data['radiant_win']
 
-df = pandas.DataFrame([[np.nan, 2, np.nan, 0],
-                    [3, 4, np.nan, 1],
-                    [np.nan, np.nan, np.nan, 5],
-                    [np.nan, 3, np.nan, 4]],
-                    columns=list('ABCD'))
+
